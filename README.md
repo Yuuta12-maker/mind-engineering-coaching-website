@@ -24,12 +24,6 @@ https://yuuta12-maker.github.io/mind-engineering-coaching-website/
 1. `logo-mec.jpg` - コンセプト画像
 2. `profile.jpg` - プロフィール画像
 
-## 連絡先
-
-- メール：mindengineeringcoaching@gmail.com
-- 住所：〒790-0012 愛媛県松山市湊町2-5-2リコオビル401
-- 電話：090-5710-7627
-
 ## 著作権
 
 © 2025 森山雄太 マインドエンジニアリング・コーチング All Rights Reserved.
