@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マインドエンジニアリング・コーチング | 人生を根本から変える科学的アプローチ</title>
+    <meta name="description" content="マインドエンジニアリング・コーチングは、最新の認知科学的知見を基盤とし、人が本来持つマインドの力を最大限に引き出す実践的プログラムです。現状の外側にゴールを設定し、人生を根本から変革します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #c50502;
+            --primary-dark: #9c0401;
+            --primary-light: #ff6b69;
+            --dark: #333333;
+            --light: #ffffff;
+            --gray: #f5f5f5;
+            --gray-dark: #e0e0e0;
+            --accent: #222222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: #c50502;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: white;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            letter-spacing: 1px;
+            font-weight: 900;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--primary);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-center .section-title::after {
+            left: 0;
+            transform: none;
+        }
+
+        /* スクロールボタンのスタイル */
+        .scroll-btn {
+            display: block;
+            margin: 60px auto 0;
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+            z-index: 2;
+        }
+
+        .scroll-btn:hover {
+            border-color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ヒーローセクション用のスタイル */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: #c50502;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            color: white;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://placehold.jp/500x500.png');
+            background-size: cover;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 48px; /* タイトルサイズを調整して改行を防止 */
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+            white-space: nowrap; /* 改行を防止 */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-title-line {
+            display: block;
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        .hero-title-line::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: rgba(197, 5, 2, 0.2);
+            z-index: -1;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: white;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-text {
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Pain Points Section */
+        .pain-points {
+            background-color: var(--gray);
+            position: relative;
+            padding: 80px 0;
+        }
+
+        .pain-points::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: var(--gray);
+            transform: skewY(-3deg);
+            z-index: -1;
+        }
+
+        .pain-point {
+            background-color: var(--light);
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .pain-point:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-top: 4px solid var(--primary);
+        }
+
+        .pain-point-title {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .pain-point-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+            opacity: 0.3;
+        }
+
+        .pain-points-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--light);
+            padding: 150px 0 100px;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: all 0.5s ease;
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content {
+            padding-right: 30px;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--light);
+            padding: 100px 0;
+        }
+
+        /* ↓↓↓ フィーチャーカードの新しいスタイル ↓↓↓ */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background-color: var(--gray);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-title {
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+            display: inline-block;
+            line-height: 1.4;
+            min-height: 62px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .feature-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .feature-text {
+            position: relative;
+            z-index: 1;
+            margin-top: 15px;
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.8;
+            flex-grow: 1;
+        }
+
+        .feature-number {
+            display: none; /* 数字を非表示に */
+        }
+        /* ↑↑↑ フィーチャーカードの新しいスタイル ↑↑↑ */
+
+        /* Comparison Section */
+        .comparison {
+            background-color: var(--gray);
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .comparison::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: var(--gray);
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 50px;
+            background-color: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-dark);
+        }
+
+        .comparison-table th {
+            background-color: var(--primary);
+            color: var(--light);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table .check {
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        /* Program Section */
+        .program {
+            background-color: var(--gray);
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .program::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: var(--gray);
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+
+        .program-details {
+            background-color: var(--light);
+            border-radius: 15px;
+            padding: 50px;
+            margin-top: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .program-row {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--gray-dark);
+            padding-bottom: 30px;
+            position: relative;
+        }
+
+        .program-row:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .program-label {
+            width: 200px;
+            font-weight: 900;
+            color: var(--primary);
+            font-size: 18px;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .program-label::after {
+            display: none;
+        }
+
+        .program-row:last-child .program-label::after {
+            display: none;
+        }
+
+        .program-value {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .program-note {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Process Section */
+        .process {
+            background-color: var(--light);
+            padding: 100px 0;
+        }
+
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            width: calc(100% - 100px);
+            height: 4px;
+            background-color: var(--gray-dark);
+            z-index: 0;
+        }
+
+        .process-step {
+            width: 23%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            color: var(--light);
+            font-size: 28px;
+            font-weight: 900;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(197, 5, 2, 0.3);
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .step-description {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Price Section */
+        .price {
+            background-color: var(--light);
+            padding: 100px 0;
+        }
+
+        .price-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .price-box {
+            background-color: var(--light);
+            border-radius: 15px;
+            padding: 50px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            border: 1px solid var(--gray-dark);
+        }
+
+        .price-box:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .price-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 900;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .price-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .price-value {
+            font-size: 54px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--accent);
+            margin-top: 20px;
+        }
+
+        .price-details {
+            margin: 40px 0;
+        }
+
+        .price-detail {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .price-detail svg,
+        .price-detail i {
+            color: var(--primary);
+            margin-right: 15px;
+            flex-shrink: 0;
+            margin-top: 5px;
+            font-size: 20px;
+        }
+
+        .price-note {
+            font-size: 14px;
+            color: #666;
+            margin-top: 30px;
+        }
+
+        /* Profile Section */
+        .profile {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+            border: 6px solid var(--primary);
+            transition: all 0.4s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-content {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 900;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-name::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .profile-text {
+            margin-bottom: 30px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: var(--primary);
+            color: var(--light);
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: var(--light);
+            transform: skewY(-2deg);
+        }
+
+        .cta-title {
+            font-size: 42px;
+            margin-bottom: 30px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+        }
+
+        .cta-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--light);
+            opacity: 0.5;
+        }
+
+        .cta-text {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .btn-cta {
+            background-color: var(--light);
+            color: var(--primary);
+            font-size: 20px;
+            padding: 20px 50px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--gray);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--accent);
+            color: var(--light);
+            padding: 50px 0;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--light);
+            margin-bottom: 20px;
+            display: inline-block;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .footer-contact {
+            margin-top: 20px;
+        }
+
+        .footer-contact div {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+
+        .footer-menu-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .footer-menu-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-menu {
+            list-style: none;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-menu a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .footer-menu a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1a1a1a;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease forwards;
+            opacity: 0;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .section {
+                padding: 80px 0;
+            }
+
+            .hero-title {
+                font-size: 42px;
+            }
+
+            .hero-subtitle {
+                font-size: 22px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-content {
+                padding-right: 0;
+            }
+
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image {
+                margin: 0 auto;
+            }
+
+            .section-title {
+                font-size: 38px;
+            }
+
+            .profile-name::after,
+            .section-title::after,
+            .price-title::after,
+            .footer-menu-title::after {
+                left: 0;
+                width: 100%;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .process-step {
+                width: 48%;
+                margin-bottom: 40px;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .program-row {
+                flex-direction: column;
+            }
+
+            .program-label {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .program-label::after {
+                width: 100%;
+                bottom: -10px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .cta-title {
+                font-size: 32px;
+            }
+
+            .btn {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+
+            .process-step {
+                width: 100%;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-stats {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 30px;
+                white-space: normal; /* スマホサイズでは改行を許可 */
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .price-box {
+                padding: 30px 20px;
+            }
+
+            .price-value {
+                font-size: 40px;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 中央寄せヒーローセクション -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">マインドエンジニアリング・コーチング</h1>
+                <h2 class="hero-subtitle">あなたの人生を根本から変える、科学的アプローチ</h2>
+                <p class="hero-text">
+                    マインドが動き出す。努力はいらない。
+                </p>
+                <div class="hero-actions">
+                    <a href="https://docs.google.com/forms/d/1HNEkQx3ug5l9aPD3xnVVSpm0NIrhW1vHBT21iMYOlBU/edit" target="_blank" class="btn btn-primary">初回トライアルに申し込む</a>
+                    <a href="#about" class="btn btn-secondary">詳しく見る</a>
+                </div>
+                
+                <!-- 申し込みボタンの下にスクロールボタンを配置 -->
+                <a href="#about" class="scroll-btn">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points">
+        <div class="container text-center">
+            <h2 class="section-title">こんな思いはありませんか？</h2>
+            <div class="pain-points-container">
+                <div class="pain-point fade-in">
+                    <h3 class="pain-point-title">「今の現状を超えて、本当にやりたいことを実現したい」</h3>
+                    <p>
+                        心の奥にある本当の望みに気づき、それを実現するための道筋が見えない。現状の枠組みを超えた可能性を探りたい。
+                    </p>
+                </div>
+                <div class="pain-point fade-in delay-1">
+                    <h3 class="pain-point-title">「努力はしているのに、なぜか前に進めない」</h3>
+                    <p>
+                        頑張っているはずなのに、なかなか結果が出ない。何か根本的なアプローチが足りていないのかもしれない。
+                    </p>
+                </div>
+                <div class="pain-point fade-in delay-2">
+                    <h3 class="pain-point-title">「何かもっと大きな目標に向かって生きたい」</h3>
+                    <p>
+                        現状に満足できず、もっと大きな目標、社会に貢献できる生き方を模索している。自分の可能性をさらに広げたい。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-content fade-in">
+                <h2 class="section-title">マインドエンジニアリング・コーチングとは</h2>
+                <p>
+                    マインドエンジニアリング・コーチングは、最新の認知科学的知見を基盤とし、人が本来持つマインドの力を最大限に引き出す実践的プログラムです。
+                </p>
+                <p>
+                    このコーチングの核心は「<strong>現状の外側にゴールを設定する</strong>」という考え方です。単なるスキルアップや問題解決ではなく、人生全体を変革する道筋を開きます。
+                </p>
+                <p>
+                    従来の「根性論」や「ポジティブシンキング」とは一線を画した、科学的アプローチであなたの可能性を解放します。
+                </p>
+                <h3 style="margin-top: 30px; font-size: 22px; font-weight: 700;">このコーチングで得られること</h3>
+                <ul style="margin-top: 15px; margin-left: 20px;">
+                    <li>現状の制約を超えた、真のゴール設定</li>
+                    <li>努力感なく自然にゴールに向かうマインドの獲得</li>
+                    <li>あなたが100%やりたいことを明確にする力</li>
+                    <li>ホメオスタシス（恒常性維持機能）を活用した持続的な成長</li>
+                    <li>社会との調和の中で自己実現を果たす視点</li>
+                </ul>
+            </div>
+            <div class="about-image fade-in delay-1">
+                <img src="logo-mec.jpg" alt="マインドエンジニアリング・コーチングのイメージ">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - 文字の収まりを改善 -->
+    <section class="features" id="features">
+        <div class="container text-center">
+            <h2 class="section-title">なぜマインドエンジニアリング・コーチングなのか？</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="feature-title">「現状の外」にゴールを設定</h3>
+                    <p class="feature-text">
+                        多くの人は「現状の内側」、つまり今の延長線上にゴールを設定してしまいます。真の変化は<strong>現状の外側</strong>にゴールを設定することから始まります。これがホメオスタシスを最大限に機能させる鍵です。
+                    </p>
+                </div>
+                <div class="feature-card fade-in delay-1">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3 class="feature-title">脳の仕組みを活用</h3>
+                    <p class="feature-text">
+                        私たちの脳には「ホメオスタシス」という恒常性維持機能があります。この脳の働きを利用して、努力感なく自然とゴールに向かうエネルギーを生み出します。現状と理想状態の差がエネルギーを生み出す原理です。
+                    </p>
+                </div>
+                <div class="feature-card fade-in delay-2">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3 class="feature-title">100%やりたいことに集中</h3>
+                    <p class="feature-text">
+                        「やるべきこと」や「できること」ではなく、「やりたいこと」に焦点を合わせます。やりたいことをやりたいだけやる—それが最も早く確実に結果を出す道です。好きなことは継続しやすく、上達も早いのです。
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <h3 class="feature-title">過去ではなく未来から考える</h3>
+                    <p class="feature-text">
+                        「時間は未来から過去へ流れる」という視点で考えます。過去の経験や制約に縛られず、未来のゴール達成という視点から現在すべきことを導き出します。過去は一切関係ありません。
+                    </p>
+                </div>
+                <div class="feature-card fade-in delay-1">
+                    <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="feature-title">バランスホイールの活用</h3>
+                    <p class="feature-text">
+                        人生の各領域（健康、家族、教養、職業、ファイナンス、社会貢献など）にバランスよくゴールを設定し、相乗効果を生み出します。各ゴールが相互に影響し合い、より豊かな人生を創出します。
+                    </p>
+                </div>
+                <div class="feature-card fade-in delay-2">
+                    <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 class="feature-title">社会貢献の視点</h3>
+                    <p class="feature-text">
+                        個人の幸せと社会の調和の両立を目指します。真の自己実現は、社会貢献という視点から生まれます。誰かが苦痛を感じるようなゴールではなく、みんながやさしい世界を実現するゴールを設定します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">他のコーチングとの違い</h2>
+                <p>マインドエンジニアリング・コーチングは、従来のコーチング手法と比較して明確な違いがあります</p>
+            </div>
+            <table class="comparison-table fade-in">
+                <thead>
+                    <tr>
+                        <th>特徴</th>
+                        <th>一般的なコーチング</th>
+                        <th>マインドエンジニアリング・コーチング</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ゴール設定の位置</strong></td>
+                        <td>現状の延長線上に設定</td>
+                        <td><strong class="check">現状の外側に設定</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>アプローチ</strong></td>
+                        <td>問題解決型・ステップバイステップ</td>
+                        <td><strong class="check">創造型・現状打破</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>過去の扱い</strong></td>
+                        <td>過去の分析に時間を費やす</td>
+                        <td><strong class="check">過去は関係なし、未来から考える</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>エネルギー源</strong></td>
+                        <td>意志の力、努力</td>
+                        <td><strong class="check">ホメオスタシスの自然なエネルギー</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>社会との関係</strong></td>
+                        <td>個人の成功に重点</td>
+                        <td><strong class="check">社会貢献を包含したゴール設定</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>理論的基盤</strong></td>
+                        <td>経験則や心理学</td>
+                        <td><strong class="check">最新の認知科学と脳科学</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="program" id="program">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">マインドエンジニアリング・コーチングプログラム</h2>
+                <p>
+                    人生を根本から変革し、社会貢献を果たすための科学的アプローチ
+                </p>
+            </div>
+            <div class="program-details fade-in">
+                <div class="program-row">
+                    <div class="program-label">期間</div>
+                    <div class="program-value">6ヶ月間</div>
+                </div>
+                <div class="program-row">
+                    <div class="program-label">形式</div>
+                    <div class="program-value">パーソナルセッション（月1回・各約30分）<br>対面またはオンライン（Google Meet）</div>
+                </div>
+                <div class="program-row">
+                    <div class="program-label">回数</div>
+                    <div class="program-value">全6回（初回トライアル + 継続5回）</div>
+                </div>
+                <div class="program-row">
+                    <div class="program-label">主な内容</div>
+                    <div class="program-value">
+                        <ul style="margin-left: 20px;">
+                            <li>現状の外側のゴール設定</li>
+                            <li>バランスホイールを活用した人生全体の調和</li>
+                            <li>ブリーフシステム（信念体系）の変革</li>
+                            <li>新しいコンフォートゾーンの創造</li>
+                            <li>ホメオスタシスの力でゴール達成までのエネルギーを生み出す</li>
+                            <li>エフィカシー（自己効力感）の向上</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="program-row">
+                    <div class="program-label">特徴</div>
+                    <div class="program-value">
+                        <ul style="margin-left: 20px;">
+                            <li>クライアント一人ひとりに合わせた個別対応</li>
+                            <li>決まった流れや手順を設けない柔軟なアプローチ</li>
+                            <li>マインドの自然な流れを尊重した創造的な関わり</li>
+                            <li>努力感不要、やりたいことをやりたいだけやる</li>
+                            <li>科学的根拠に基づくアプローチ</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="program-note">
+                    ※ セッション内容はクライアント一人ひとりのニーズに合わせてカスタマイズされます。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container text-center">
+            <h2 class="section-title">お申し込みから始めるまで</h2>
+            <p>マインドエンジニアリング・コーチングは、以下の流れで始まります</p>
+            
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">初回トライアル申込</h3>
+                    <p class="step-description">専用フォームから初回トライアルセッションに申し込みます。お支払いは6,000円（税込）です。</p>
+                </div>
+                
+                <div class="process-step fade-in delay-1">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">トライアルセッション</h3>
+                    <p class="step-description">約30分のセッションで、コーチングの概要説明とあなたのニーズやゴールの初期探索を行います。</p>
+                </div>
+                
+                <div class="process-step fade-in delay-2">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">継続判断・契約</h3>
+                    <p class="step-description">トライアル後、継続を希望される場合は1週間以内に継続申込と残金のお支払い(214,000円)をお願いします。</p>
+                </div>
+                
+                <div class="process-step fade-in delay-3">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">コーチング開始</h3>
+                    <p class="step-description">契約完了後、2回目以降のセッションスケジュールを調整し、本格的なコーチングプログラムを開始します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="price" id="price">
+        <div class="container text-center">
+            <h2 class="section-title">料金プラン</h2>
+            <p>
+                まずは初回トライアルセッションから、マインドエンジニアリング・コーチングを体験してみませんか？
+            </p>
+            <div class="price-container">
+                <div class="price-box fade-in">
+                    <h3 class="price-title">マインドエンジニアリング・コーチングプログラム</h3>
+                    <div class="price-value">220,000円 <span style="font-size: 18px; font-weight: normal;">(税込)</span></div>
+                    <div class="price-details">
+                        <div class="price-detail">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>初回トライアルセッション: 6,000円（税込）</strong><br>
+                            マインドエンジニアリング・コーチングの概要説明<br>
+                            あなたのニーズとゴールの初期探索<br>
+                            コーチとの相性確認</div>
+                        </div>
+                        <div class="price-detail">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>継続セッション（2〜6回目）: 214,000円（税込）</strong><br>
+                            トライアル後に継続を希望される場合の一括支払い</div>
+                        </div>
+                        <div class="price-detail">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>期間: 6ヶ月間</strong><br>
+                            セッション: 月1回×6回（各30分程度）</div>
+                        </div>
+                        <div class="price-detail">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>お申し込みプロセス</strong><br>
+                            1. 初回トライアルセッションにお申し込み<br>
+                            2. トライアルセッション実施（約30分）<br>
+                            3. 継続をご希望の場合は1週間以内に継続申込<br>
+                            4. ご契約・お支払い手続き<br>
+                            5. 2回目以降のセッションスケジュール調整</div>
+                        </div>
+                        <div class="price-detail">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>セッション形式</strong><br>
+                            対面またはオンライン（Google Meet）対応</div>
+                        </div>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/1HNEkQx3ug5l9aPD3xnVVSpm0NIrhW1vHBT21iMYOlBU/edit" target="_blank" class="btn btn-primary">初回トライアルに申し込む</a>
+                    <p class="price-note">
+                        ※ トライアルセッション後の継続は任意です。<br>
+                        ※ 継続を希望される場合は、1週間以内に継続申込をお願いいたします。<br>
+                        ※ 継続セッションは一括前払いとなります。<br>
+                        ※ お支払い後のキャンセル・返金はできませんのでご了承ください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile" id="profile">
+        <div class="container">
+            <h2 class="section-title text-center">コーチプロフィール</h2>
+            <div class="profile-container">
+                <div class="profile-image fade-in">
+                    <img src="profile.jpg" alt="森山雄太">
+                </div>
+                <div class="profile-content fade-in delay-1">
+                    <h3 class="profile-name">森山 雄太</h3>
+                    <p class="profile-text">
+                        マインドエンジニアリング・コーチ。認知科学とコーチングを融合した実践的アプローチを提供しています。「みんながやさしい世界を実現する」をビジョンに、個人と組織の変革をサポート。
+                    </p>
+                    <p class="profile-text">
+                        最新の認知科学の知見を取り入れた独自のコーチング手法を確立。クライアントの現状の外側にゴールを設定し、自然なエネルギーでゴール達成へと導く実績を持つ。
+                    </p>
+                    <p class="profile-text">
+                        「コーチングマインドをひとりでも多くの人にインストール」をミッションに、真のゴール設定と社会貢献を通じて、より良い世界を創造するためのサポートを行っています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title fade-in">人生を変えるその一歩を、今踏み出しませんか？</h2>
+            <p class="cta-text fade-in delay-1">
+                「やりたいことを、やりたいだけやる。それだけで人生は変わる。」<br>
+                まずは初回トライアルセッションで、可能性への一歩を踏み出してみませんか？
+            </p>
+            <a href="https://docs.google.com/forms/d/1HNEkQx3ug5l9aPD3xnVVSpm0NIrhW1vHBT21iMYOlBU/edit" target="_blank" class="btn btn-cta fade-in delay-2">初回トライアルに申し込む</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-container">
+            <div>
+                <a href="#" class="footer-logo">Mind Engineering Coaching</a>
+                <p>
+                    <strong>「みんながやさしい世界を実現する」</strong><br>
+                    現状の外側にゴールを設定し、世界をより良く変えていきましょう。
+                </p>
+                <div class="footer-contact">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:mindengineeringcoaching@gmail.com" style="color: #fff; text-decoration: underline; transition: color 0.3s ease;">mindengineeringcoaching@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="footer-menu-title">サイトマップ</h3>
+                <ul class="footer-menu">
+                    <li><a href="#about">コーチングとは</a></li>
+                    <li><a href="#features">特徴</a></li>
+                    <li><a href="#program">プログラム</a></li>
+                    <li><a href="#price">料金</a></li>
+                    <li><a href="#process">申し込みの流れ</a></li>
+                    <li><a href="#profile">プロフィール</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer-menu-title">お申し込み</h3>
+                <ul class="footer-menu">
+                    <li><a href="https://docs.google.com/forms/d/1HNEkQx3ug5l9aPD3xnVVSpm0NIrhW1vHBT21iMYOlBU/edit" target="_blank">初回トライアルセッション</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 森山雄太 マインドエンジニアリング・コーチング All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Reveal animations on scroll
+        const revealElements = document.querySelectorAll('.fade-in');
+
+        function reveal() {
+            for (let i = 0; i < revealElements.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = revealElements[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    revealElements[i].style.opacity = '1';
+                    revealElements[i].style.transform = 'translateY(0)';
+                }
+            }
+        }
+
+        // Set initial state for fade-in elements
+        revealElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        });
+
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal);
+    </script>
+</body>
+</html>
