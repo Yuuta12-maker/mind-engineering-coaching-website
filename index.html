@@ -462,7 +462,7 @@
         }
         /* ↑↑↑ フィーチャーカードの新しいスタイル ↑↑↑ */
 
-        /* Comparison Section */
+        /* Comparison Section (カード式) */
         .comparison {
             background-color: var(--gray);
             padding: 100px 0;
@@ -481,37 +481,95 @@
             z-index: 1;
         }
 
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
+        /* カードグリッド */
+        .comparison-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 50px;
+        }
+
+        /* 比較カード */
+        .comparison-card {
             background-color: var(--light);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
-        .comparison-table th,
-        .comparison-table td {
-            padding: 20px;
-            text-align: left;
-            border-bottom: 1px solid var(--gray-dark);
+        .comparison-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
         }
 
-        .comparison-table th {
+        /* カードヘッダー */
+        .comparison-card-header {
             background-color: var(--primary);
             color: var(--light);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-card-header i {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .comparison-card-header h3 {
+            font-size: 20px;
             font-weight: 700;
-            font-size: 18px;
+            margin: 0;
         }
 
-        .comparison-table tr:last-child td {
-            border-bottom: none;
+        /* カード本体 */
+        .comparison-card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .comparison-table .check {
+        /* 比較項目 */
+        .comparison-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: var(--gray);
+        }
+
+        .comparison-item.highlight {
+            background-color: rgba(197, 5, 2, 0.05);
+            border-left: 4px solid var(--primary);
+        }
+
+        .comparison-label {
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .comparison-value {
+            font-size: 16px;
+        }
+
+        .comparison-value .check {
             color: var(--primary);
             font-weight: 900;
+        }
+        
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .comparison-cards {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Program Section */
@@ -1316,54 +1374,122 @@
         </div>
     </section>
 
-    <!-- Comparison Section -->
+    <!-- Comparison Section (カード形式) -->
     <section class="comparison">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-title">他のコーチングとの違い</h2>
                 <p>マインドエンジニアリング・コーチングは、従来のコーチング手法と比較して明確な違いがあります</p>
             </div>
-            <table class="comparison-table fade-in">
-                <thead>
-                    <tr>
-                        <th>特徴</th>
-                        <th>一般的なコーチング</th>
-                        <th>マインドエンジニアリング・コーチング</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>ゴール設定の位置</strong></td>
-                        <td>現状の延長線上に設定</td>
-                        <td><strong class="check">現状の外側に設定</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>アプローチ</strong></td>
-                        <td>問題解決型・ステップバイステップ</td>
-                        <td><strong class="check">創造型・現状打破</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>過去の扱い</strong></td>
-                        <td>過去の分析に時間を費やす</td>
-                        <td><strong class="check">過去は関係なし、未来から考える</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>エネルギー源</strong></td>
-                        <td>意志の力、努力</td>
-                        <td><strong class="check">ホメオスタシスの自然なエネルギー</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>社会との関係</strong></td>
-                        <td>個人の成功に重点</td>
-                        <td><strong class="check">社会貢献を包含したゴール設定</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>理論的基盤</strong></td>
-                        <td>経験則や心理学</td>
-                        <td><strong class="check">最新の認知科学と脳科学</strong></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="comparison-cards">
+                <!-- カード1: ゴール設定の位置 -->
+                <div class="comparison-card fade-in">
+                    <div class="comparison-card-header">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>ゴール設定の位置</h3>
+                    </div>
+                    <div class="comparison-card-body">
+                        <div class="comparison-item">
+                            <div class="comparison-label">一般的なコーチング</div>
+                            <div class="comparison-value">現状の延長線上に設定</div>
+                        </div>
+                        <div class="comparison-item highlight">
+                            <div class="comparison-label">マインドエンジニアリング・コーチング</div>
+                            <div class="comparison-value"><strong class="check">現状の外側に設定</strong></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- カード2: アプローチ -->
+                <div class="comparison-card fade-in delay-1">
+                    <div class="comparison-card-header">
+                        <i class="fas fa-route"></i>
+                        <h3>アプローチ</h3>
+                    </div>
+                    <div class="comparison-card-body">
+                        <div class="comparison-item">
+                            <div class="comparison-label">一般的なコーチング</div>
+                            <div class="comparison-value">問題解決型・ステップバイステップ</div>
+                        </div>
+                        <div class="comparison-item highlight">
+                            <div class="comparison-label">マインドエンジニアリング・コーチング</div>
+                            <div class="comparison-value"><strong class="check">創造型・現状打破</strong></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- カード3: 過去の扱い -->
+                <div class="comparison-card fade-in delay-2">
+                    <div class="comparison-card-header">
+                        <i class="fas fa-history"></i>
+                        <h3>過去の扱い</h3>
+                    </div>
+                    <div class="comparison-card-body">
+                        <div class="comparison-item">
+                            <div class="comparison-label">一般的なコーチング</div>
+                            <div class="comparison-value">過去の分析に時間を費やす</div>
+                        </div>
+                        <div class="comparison-item highlight">
+                            <div class="comparison-label">マインドエンジニアリング・コーチング</div>
+                            <div class="comparison-value"><strong class="check">過去は関係なし、未来から考える</strong></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- カード4: エネルギー源 -->
+                <div class="comparison-card fade-in">
+                    <div class="comparison-card-header">
+                        <i class="fas fa-bolt"></i>
+                        <h3>エネルギー源</h3>
+                    </div>
+                    <div class="comparison-card-body">
+                        <div class="comparison-item">
+                            <div class="comparison-label">一般的なコーチング</div>
+                            <div class="comparison-value">意志の力、努力</div>
+                        </div>
+                        <div class="comparison-item highlight">
+                            <div class="comparison-label">マインドエンジニアリング・コーチング</div>
+                            <div class="comparison-value"><strong class="check">ホメオスタシスの自然なエネルギー</strong></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- カード5: 社会との関係 -->
+                <div class="comparison-card fade-in delay-1">
+                    <div class="comparison-card-header">
+                        <i class="fas fa-users"></i>
+                        <h3>社会との関係</h3>
+                    </div>
+                    <div class="comparison-card-body">
+                        <div class="comparison-item">
+                            <div class="comparison-label">一般的なコーチング</div>
+                            <div class="comparison-value">個人の成功に重点</div>
+                        </div>
+                        <div class="comparison-item highlight">
+                            <div class="comparison-label">マインドエンジニアリング・コーチング</div>
+                            <div class="comparison-value"><strong class="check">社会貢献を包含したゴール設定</strong></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- カード6: 理論的基盤 -->
+                <div class="comparison-card fade-in delay-2">
+                    <div class="comparison-card-header">
+                        <i class="fas fa-book"></i>
+                        <h3>理論的基盤</h3>
+                    </div>
+                    <div class="comparison-card-body">
+                        <div class="comparison-item">
+                            <div class="comparison-label">一般的なコーチング</div>
+                            <div class="comparison-value">経験則や心理学</div>
+                        </div>
+                        <div class="comparison-item highlight">
+                            <div class="comparison-label">マインドエンジニアリング・コーチング</div>
+                            <div class="comparison-value"><strong class="check">最新の認知科学と脳科学</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
