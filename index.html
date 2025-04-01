@@ -1125,6 +1125,64 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* スマホ表示時の比較表のスタイル */
+        @media (max-width: 768px) {
+            /* テーブルのヘッダー行を非表示にする */
+            .comparison-table thead {
+                display: none;
+            }
+            
+            /* 各行をカード形式に変換 */
+            .comparison-table tbody tr {
+                display: block;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                background-color: var(--light);
+            }
+            
+            /* セルをブロック要素として表示 */
+            .comparison-table td {
+                display: block;
+                text-align: left;
+                padding: 15px;
+                position: relative;
+                border-bottom: 1px solid var(--gray-dark);
+            }
+            
+            /* 特徴のセル（最初のセル）をヘッダーとして強調 */
+            .comparison-table td:first-child {
+                background-color: var(--primary);
+                color: var(--light);
+                font-weight: 700;
+                font-size: 18px;
+                padding: 15px;
+            }
+            
+            /* 各セルの前にラベルを追加 */
+            .comparison-table td:nth-child(2)::before {
+                content: "一般的なコーチング: ";
+                font-weight: 700;
+                display: block;
+                margin-bottom: 5px;
+                color: #666;
+            }
+            
+            .comparison-table td:nth-child(3)::before {
+                content: "マインドエンジニアリング・コーチング: ";
+                font-weight: 700;
+                display: block;
+                margin-bottom: 5px;
+                color: #666;
+            }
+            
+            /* 最後のセルのボーダーを削除 */
+            .comparison-table td:last-child {
+                border-bottom: none;
+            }
+        }
     </style>
 </head>
 <body>
