@@ -271,12 +271,20 @@ export default function Privacy() {
 
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
           <div style={{ marginBottom: '20px' }}>
-            <a href="/legal" 
+            <a href="/terms" 
                style={{ 
                  color: 'var(--primary)', 
                  textDecoration: 'underline',
                  fontSize: '16px',
                  marginRight: '20px'
+               }}>
+              利用規約
+            </a>
+            <a href="/legal" 
+               style={{ 
+                 color: 'var(--primary)', 
+                 textDecoration: 'underline',
+                 fontSize: '16px'
                }}>
               特定商取引法に基づく表記
             </a>

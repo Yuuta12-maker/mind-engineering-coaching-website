@@ -200,12 +200,20 @@ export default function Legal() {
 
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
           <div style={{ marginBottom: '20px' }}>
-            <a href="/privacy" 
+            <a href="/terms" 
                style={{ 
                  color: 'var(--primary)', 
                  textDecoration: 'underline',
                  fontSize: '16px',
                  marginRight: '20px'
+               }}>
+              利用規約
+            </a>
+            <a href="/privacy" 
+               style={{ 
+                 color: 'var(--primary)', 
+                 textDecoration: 'underline',
+                 fontSize: '16px'
                }}>
               プライバシーポリシー
             </a>
