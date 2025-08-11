@@ -8,10 +8,10 @@ export default function Home() {
     // Smooth scrolling for anchor links
     const anchors = document.querySelectorAll('a[href^="#"]')
     anchors.forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      const handleClick = (e: Event) => {
         e.preventDefault()
         
-        const targetId = (this as HTMLAnchorElement).getAttribute('href')
+        const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href')
         if (targetId === '#') return
         
         const targetElement = document.querySelector(targetId!)
@@ -21,7 +21,9 @@ export default function Home() {
             behavior: 'smooth'
           })
         }
-      })
+      }
+      
+      anchor.addEventListener('click', handleClick)
     })
     
     // Reveal animations on scroll
