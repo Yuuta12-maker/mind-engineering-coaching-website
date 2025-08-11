@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import { LINKS, CONTACT_INFO, SITE_INFO } from '../constants'
 
 export const metadata: Metadata = {
-  title: '利用規約 | マインドエンジニアリング・コーチング',
-  description: 'マインドエンジニアリング・コーチングのサービス利用規約です。',
+  title: `利用規約 | ${SITE_INFO.SITE_NAME}`,
+  description: `${SITE_INFO.SITE_NAME}のサービス利用規約です。`,
 }
 
 export default function Terms() {
@@ -366,7 +367,7 @@ export default function Terms() {
 
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
           <div style={{ marginBottom: '20px' }}>
-            <a href="/legal" 
+            <a href={LINKS.LEGAL} 
                style={{ 
                  color: 'var(--primary)', 
                  textDecoration: 'underline',
@@ -375,7 +376,7 @@ export default function Terms() {
                }}>
               特定商取引法に基づく表記
             </a>
-            <a href="/privacy" 
+            <a href={LINKS.PRIVACY} 
                style={{ 
                  color: 'var(--primary)', 
                  textDecoration: 'underline',

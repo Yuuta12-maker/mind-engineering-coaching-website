@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import { LINKS, CONTACT_INFO, SITE_INFO } from '../constants'
 
 export const metadata: Metadata = {
-  title: '特定商取引法に基づく表記 | マインドエンジニアリング・コーチング',
-  description: 'マインドエンジニアリング・コーチングの特定商取引法に基づく表記です。',
+  title: `特定商取引法に基づく表記 | ${SITE_INFO.SITE_NAME}`,
+  description: `${SITE_INFO.SITE_NAME}の特定商取引法に基づく表記です。`,
 }
 
 export default function Legal() {
@@ -33,7 +34,7 @@ export default function Legal() {
             }}>
               販売者
             </h2>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>森山雄太</p>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>{CONTACT_INFO.SELLER_NAME}</p>
           </div>
 
           <div style={{ marginBottom: '40px' }}>
@@ -48,8 +49,8 @@ export default function Legal() {
               所在地
             </h2>
             <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              〒790-0012<br />
-              愛媛県松山市湊町2-5-2 リコオビル401
+              {CONTACT_INFO.ADDRESS.replace(' ', '')}<br />
+              {CONTACT_INFO.ADDRESS.substring(CONTACT_INFO.ADDRESS.indexOf(' ') + 1)}
             </p>
           </div>
 
@@ -65,17 +66,17 @@ export default function Legal() {
               連絡先
             </h2>
             <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '10px' }}>
-              <strong>電話番号：</strong>090-5710-7627
+              <strong>電話番号：</strong>{CONTACT_INFO.PHONE}
             </p>
             <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '10px' }}>
               <strong>メールアドレス：</strong>
-              <a href="mailto:mindengineeringcoaching@gmail.com" 
+              <a href={`mailto:${CONTACT_INFO.EMAIL}`} 
                  style={{ color: 'var(--primary)', textDecoration: 'underline' }}>
-                mindengineeringcoaching@gmail.com
+                {CONTACT_INFO.EMAIL}
               </a>
             </p>
             <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>受付時間：</strong>平日 9:00-18:00
+              <strong>受付時間：</strong>{CONTACT_INFO.BUSINESS_HOURS}
             </p>
           </div>
 
@@ -91,13 +92,13 @@ export default function Legal() {
               販売価格
             </h2>
             <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '10px' }}>
-              <strong>トライアルセッション：</strong>6,000円（税込）
+              <strong>トライアルセッション：</strong>{PRICING.TRIAL_SESSION.toLocaleString()}円（税込）
             </p>
             <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '10px' }}>
-              <strong>継続プログラム（6ヶ月間）：</strong>214,000円（税込）
+              <strong>継続プログラム（6ヶ月間）：</strong>{PRICING.CONTINUATION_PROGRAM.toLocaleString()}円（税込）
             </p>
             <p style={{ fontSize: '18px', lineHeight: '1.8', fontWeight: '700', color: 'var(--primary)' }}>
-              <strong>総額：220,000円（税込）</strong>
+              <strong>総額：{PRICING.TOTAL.toLocaleString()}円（税込）</strong>
             </p>
           </div>
 
@@ -200,7 +201,7 @@ export default function Legal() {
 
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
           <div style={{ marginBottom: '20px' }}>
-            <a href="/terms" 
+            <a href={LINKS.TERMS} 
                style={{ 
                  color: 'var(--primary)', 
                  textDecoration: 'underline',
@@ -209,7 +210,7 @@ export default function Legal() {
                }}>
               利用規約
             </a>
-            <a href="/privacy" 
+            <a href={LINKS.PRIVACY} 
                style={{ 
                  color: 'var(--primary)', 
                  textDecoration: 'underline',

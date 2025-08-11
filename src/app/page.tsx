@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useEffect } from 'react'
+import { LINKS, CONTACT_INFO, PRICING, IMAGES } from './constants'
 
 export default function Home() {
   useEffect(() => {
@@ -76,7 +77,7 @@ export default function Home() {
               マインドが動き出す。努力はいらない。
             </p>
             <div className="hero-actions">
-              <a href="https://docs.google.com/forms/d/1nWcFZp1wNrF8YkVrDt79LdU_KVhZZn5Lr1ykAvwSyko/edit" target="_blank" rel="noopener noreferrer" className="btn btn-primary">初回トライアルに申し込む</a>
+              <a href={LINKS.APPLICATION_FORM} target="_blank" rel="noopener noreferrer" className="btn btn-primary">初回トライアルに申し込む</a>
               <a href="#about" className="btn btn-secondary">詳しく見る</a>
             </div>
             
@@ -138,7 +139,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="about-image fade-in delay-1">
-            <Image src="/logo-mec.png" alt="マインドエンジニアリング・コーチングのイメージ" width={500} height={500} />
+            <Image src={IMAGES.LOGO} alt="マインドエンジニアリング・コーチングのイメージ" width={500} height={500} />
           </div>
         </div>
       </section>
@@ -439,13 +440,13 @@ export default function Home() {
                   対面またはオンライン（Google Meet）対応</div>
                 </div>
               </div>
-              <a href="https://docs.google.com/forms/d/1nWcFZp1wNrF8YkVrDt79LdU_KVhZZn5Lr1ykAvwSyko/edit" target="_blank" rel="noopener noreferrer" className="btn btn-primary">初回トライアルに申し込む</a>
+              <a href={LINKS.APPLICATION_FORM} target="_blank" rel="noopener noreferrer" className="btn btn-primary">初回トライアルに申し込む</a>
               <p className="price-note">
                 ※ トライアルセッション後の継続は任意です。<br />
                 ※ 継続を希望される場合は、1週間以内に継続申込をお願いいたします。<br />
                 ※ 継続セッションは一括前払いとなります。<br />
                 ※ お支払い後のキャンセル・返金はできませんのでご了承ください。<br />
-                ※ 詳細については<a href="/legal" style={{color: 'var(--primary)', textDecoration: 'underline'}}>特定商取引法に基づく表記</a>をご確認ください。
+                ※ 詳細については<a href={LINKS.LEGAL} style={{color: 'var(--primary)', textDecoration: 'underline'}}>特定商取引法に基づく表記</a>をご確認ください。
               </p>
             </div>
           </div>
@@ -458,7 +459,7 @@ export default function Home() {
           <h2 className="section-title text-center">コーチプロフィール</h2>
           <div className="profile-container">
             <div className="profile-image fade-in">
-              <Image src="/profile.JPG" alt="森山雄太" width={300} height={300} />
+              <Image src={IMAGES.PROFILE} alt={CONTACT_INFO.SELLER_NAME} width={300} height={300} />
             </div>
             <div className="profile-content fade-in delay-1">
               <h3 className="profile-name">森山 雄太</h3>
@@ -484,7 +485,7 @@ export default function Home() {
             「やりたいことを、やりたいだけやる。それだけで人生は変わる。」<br />
             まずは初回トライアルセッションで、可能性への一歩を踏み出してみませんか？
           </p>
-          <a href="https://docs.google.com/forms/d/1nWcFZp1wNrF8YkVrDt79LdU_KVhZZn5Lr1ykAvwSyko/edit" target="_blank" rel="noopener noreferrer" className="btn btn-cta fade-in delay-2">初回トライアルに申し込む</a>
+          <a href={LINKS.APPLICATION_FORM} target="_blank" rel="noopener noreferrer" className="btn btn-cta fade-in delay-2">初回トライアルに申し込む</a>
         </div>
       </section>
 
@@ -500,7 +501,7 @@ export default function Home() {
             <div className="footer-contact">
               <div>
                 <i className="fas fa-envelope"></i>
-                <span><a href="mailto:mindengineeringcoaching@gmail.com" style={{color: '#fff', textDecoration: 'underline', transition: 'color 0.3s ease'}}>mindengineeringcoaching@gmail.com</a></span>
+                <span><a href={`mailto:${CONTACT_INFO.EMAIL}`} style={{color: '#fff', textDecoration: 'underline', transition: 'color 0.3s ease'}}>{CONTACT_INFO.EMAIL}</a></span>
               </div>
             </div>
           </div>
@@ -518,11 +519,11 @@ export default function Home() {
           <div>
             <h3 className="footer-menu-title">お申し込み</h3>
             <ul className="footer-menu">
-              <li><a href="https://docs.google.com/forms/d/1nWcFZp1wNrF8YkVrDt79LdU_KVhZZn5Lr1ykAvwSyko/edit" target="_blank" rel="noopener noreferrer">初回トライアルセッション</a></li>
+              <li><a href={LINKS.APPLICATION_FORM} target="_blank" rel="noopener noreferrer">初回トライアルセッション</a></li>
               <li><a href="#contact">お問い合わせ</a></li>
-              <li><a href="/terms">利用規約</a></li>
-              <li><a href="/legal">特定商取引法に基づく表記</a></li>
-              <li><a href="/privacy">プライバシーポリシー</a></li>
+              <li><a href={LINKS.TERMS}>利用規約</a></li>
+              <li><a href={LINKS.LEGAL}>特定商取引法に基づく表記</a></li>
+              <li><a href={LINKS.PRIVACY}>プライバシーポリシー</a></li>
             </ul>
           </div>
         </div>

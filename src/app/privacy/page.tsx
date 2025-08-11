@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import { LINKS, CONTACT_INFO, SITE_INFO } from '../constants'
 
 export const metadata: Metadata = {
-  title: 'プライバシーポリシー | マインドエンジニアリング・コーチング',
-  description: 'マインドエンジニアリング・コーチングの個人情報の取り扱いに関するプライバシーポリシーです。',
+  title: `プライバシーポリシー | ${SITE_INFO.SITE_NAME}`,
+  description: `${SITE_INFO.SITE_NAME}の個人情報の取り扱いに関するプライバシーポリシーです。`,
 }
 
 export default function Privacy() {
@@ -271,7 +272,7 @@ export default function Privacy() {
 
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
           <div style={{ marginBottom: '20px' }}>
-            <a href="/terms" 
+            <a href={LINKS.TERMS} 
                style={{ 
                  color: 'var(--primary)', 
                  textDecoration: 'underline',
@@ -280,7 +281,7 @@ export default function Privacy() {
                }}>
               利用規約
             </a>
-            <a href="/legal" 
+            <a href={LINKS.LEGAL} 
                style={{ 
                  color: 'var(--primary)', 
                  textDecoration: 'underline',
