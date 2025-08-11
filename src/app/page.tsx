@@ -444,7 +444,8 @@ export default function Home() {
                 ※ トライアルセッション後の継続は任意です。<br />
                 ※ 継続を希望される場合は、1週間以内に継続申込をお願いいたします。<br />
                 ※ 継続セッションは一括前払いとなります。<br />
-                ※ お支払い後のキャンセル・返金はできませんのでご了承ください。
+                ※ お支払い後のキャンセル・返金はできませんのでご了承ください。<br />
+                ※ 詳細については<a href="/legal" style={{color: 'var(--primary)', textDecoration: 'underline'}}>特定商取引法に基づく表記</a>をご確認ください。
               </p>
             </div>
           </div>
@@ -519,6 +520,7 @@ export default function Home() {
             <ul className="footer-menu">
               <li><a href="https://docs.google.com/forms/d/1nWcFZp1wNrF8YkVrDt79LdU_KVhZZn5Lr1ykAvwSyko/edit" target="_blank" rel="noopener noreferrer">初回トライアルセッション</a></li>
               <li><a href="#contact">お問い合わせ</a></li>
+              <li><a href="/legal">特定商取引法に基づく表記</a></li>
             </ul>
           </div>
         </div>
