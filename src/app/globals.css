@@ -1164,3 +1164,22 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Back to top button styles */
+.back-to-top-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}

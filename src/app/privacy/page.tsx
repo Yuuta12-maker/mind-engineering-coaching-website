@@ -290,25 +290,7 @@ export default function Privacy() {
             </a>
           </div>
           <a href="/" 
-             style={{ 
-               display: 'inline-block',
-               padding: '15px 40px',
-               backgroundColor: 'var(--primary)',
-               color: 'white',
-               textDecoration: 'none',
-               borderRadius: '50px',
-               fontWeight: '700',
-               fontSize: '18px',
-               transition: 'all 0.3s ease'
-             }}
-             onMouseOver={(e) => {
-               e.currentTarget.style.backgroundColor = 'var(--primary-dark)'
-               e.currentTarget.style.transform = 'translateY(-3px)'
-             }}
-             onMouseOut={(e) => {
-               e.currentTarget.style.backgroundColor = 'var(--primary)'
-               e.currentTarget.style.transform = 'translateY(0)'
-             }}>
+             className="back-to-top-btn">
             トップページに戻る
           </a>
         </div>
