@@ -199,6 +199,17 @@ export default function Legal() {
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <a href="/privacy" 
+               style={{ 
+                 color: 'var(--primary)', 
+                 textDecoration: 'underline',
+                 fontSize: '16px',
+                 marginRight: '20px'
+               }}>
+              プライバシーポリシー
+            </a>
+          </div>
           <a href="/" 
              style={{ 
                display: 'inline-block',

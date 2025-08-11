@@ -521,6 +521,7 @@ export default function Home() {
               <li><a href="https://docs.google.com/forms/d/1nWcFZp1wNrF8YkVrDt79LdU_KVhZZn5Lr1ykAvwSyko/edit" target="_blank" rel="noopener noreferrer">初回トライアルセッション</a></li>
               <li><a href="#contact">お問い合わせ</a></li>
               <li><a href="/legal">特定商取引法に基づく表記</a></li>
+              <li><a href="/privacy">プライバシーポリシー</a></li>
             </ul>
           </div>
         </div>
