@@ -3,9 +3,6 @@ export const LINKS = {
   // 申し込みフォーム
   APPLICATION_FORM: 'https://mec-manage.vercel.app/apply',
   
-  // メールアドレス
-  EMAIL: 'mindengineeringcoaching@gmail.com',
-  
   // 法的ページ
   TERMS: '/terms',
   PRIVACY: '/privacy',
@@ -19,6 +16,7 @@ export const LINKS = {
 
 // その他の定数
 export const CONTACT_INFO = {
+  EMAIL: 'mindengineeringcoaching@gmail.com',
   PHONE: '090-5710-7627',
   POSTAL_CODE: '〒790-0012',
   ADDRESS: '愛媛県松山市湊町2-5-2 リコオビル401',

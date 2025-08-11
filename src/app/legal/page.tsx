@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { LINKS, CONTACT_INFO, SITE_INFO } from '../constants'
+import { LINKS, CONTACT_INFO, SITE_INFO, PRICING } from '../constants'
 
 export const metadata: Metadata = {
   title: `特定商取引法に基づく表記 | ${SITE_INFO.SITE_NAME}`,
@@ -49,8 +49,8 @@ export default function Legal() {
               所在地
             </h2>
             <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              {CONTACT_INFO.ADDRESS.replace(' ', '')}<br />
-              {CONTACT_INFO.ADDRESS.substring(CONTACT_INFO.ADDRESS.indexOf(' ') + 1)}
+              {CONTACT_INFO.POSTAL_CODE}<br />
+              {CONTACT_INFO.ADDRESS}
             </p>
           </div>
 

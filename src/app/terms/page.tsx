@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { LINKS, CONTACT_INFO, SITE_INFO } from '../constants'
+import { LINKS, CONTACT_INFO, SITE_INFO, PRICING } from '../constants'
 
 export const metadata: Metadata = {
   title: `利用規約 | ${SITE_INFO.SITE_NAME}`,
@@ -92,8 +92,8 @@ export default function Terms() {
               当サービスの料金は以下のとおりです：
             </p>
             <ul style={{ fontSize: '16px', lineHeight: '1.8', marginLeft: '20px', marginBottom: '20px' }}>
-              <li style={{ marginBottom: '8px' }}><strong>トライアルセッション：</strong>6,000円（税込）</li>
-              <li><strong>継続プログラム（6ヶ月間）：</strong>214,000円（税込）</li>
+              <li style={{ marginBottom: '8px' }}><strong>トライアルセッション：</strong>{PRICING.TRIAL_SESSION.toLocaleString()}円（税込）</li>
+              <li><strong>継続プログラム（6ヶ月間）：</strong>{PRICING.CONTINUATION_PROGRAM.toLocaleString()}円（税込）</li>
             </ul>
             <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '15px' }}>
               <strong>支払い方法：</strong>
@@ -322,26 +322,26 @@ export default function Terms() {
               lineHeight: '1.8'
             }}>
               <p style={{ marginBottom: '10px' }}>
-                <strong>マインドエンジニアリング・コーチング</strong>
+                <strong>{CONTACT_INFO.COMPANY_NAME}</strong>
               </p>
               <p style={{ marginBottom: '10px' }}>
-                <strong>担当者：</strong>森山雄太
+                <strong>担当者：</strong>{CONTACT_INFO.SELLER_NAME}
               </p>
               <p style={{ marginBottom: '10px' }}>
-                <strong>所在地：</strong>〒790-0012 愛媛県松山市湊町2-5-2 リコオビル401
+                <strong>所在地：</strong>{CONTACT_INFO.FULL_ADDRESS}
               </p>
               <p style={{ marginBottom: '10px' }}>
-                <strong>電話番号：</strong>090-5710-7627
+                <strong>電話番号：</strong>{CONTACT_INFO.PHONE}
               </p>
               <p style={{ marginBottom: '10px' }}>
                 <strong>メールアドレス：</strong>
-                <a href="mailto:mindengineeringcoaching@gmail.com" 
+                <a href={`mailto:${CONTACT_INFO.EMAIL}`} 
                    style={{ color: 'var(--primary)', textDecoration: 'underline' }}>
-                  mindengineeringcoaching@gmail.com
+                  {CONTACT_INFO.EMAIL}
                 </a>
               </p>
               <p>
-                <strong>受付時間：</strong>平日 9:00-18:00
+                <strong>受付時間：</strong>{CONTACT_INFO.BUSINESS_HOURS}
               </p>
             </div>
           </div>
