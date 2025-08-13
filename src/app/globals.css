@@ -2,14 +2,14 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 :root {
-  --primary: #201801;
-  --primary-dark: #1a1400;
-  --primary-light: #3d3b2a;
-  --dark: #201801;
+  --primary: #c50502;
+  --primary-dark: #9c0401;
+  --primary-light: #ff6b69;
+  --dark: #333333;
   --light: #ffffff;
   --gray: #f2f2f2;
   --gray-dark: #e8e8e8;
-  --accent: #201801;
+  --accent: #222222;
   --beige: #f2f2f2;
   --warm-white: #fafafa;
 }
@@ -145,13 +145,13 @@ h1, h2, h3, h4, h5 {
 .hero {
   position: relative;
   min-height: 100vh;
-  background: var(--beige);
+  background: var(--primary);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  color: var(--dark);
+  color: white;
 }
 
 .hero::before {
@@ -194,13 +194,14 @@ h1, h2, h3, h4, h5 {
 .hero-title {
   font-size: 48px;
   margin-bottom: 30px;
-  color: var(--dark);
+  color: white;
   font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.3;
   position: relative;
   display: inline-block;
   white-space: nowrap;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-title-line {
@@ -223,11 +224,12 @@ h1, h2, h3, h4, h5 {
 .hero-subtitle {
   font-size: 20px;
   margin-bottom: 40px;
-  color: var(--primary-light);
+  color: white;
   font-weight: 400;
   position: relative;
   display: inline-block;
   letter-spacing: 0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-subtitle::after {
