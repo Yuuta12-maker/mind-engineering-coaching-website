@@ -37,21 +37,6 @@ export default function Legal() {
             <p style={{ fontSize: '16px', lineHeight: '1.8' }}>{CONTACT_INFO.SELLER_NAME}</p>
           </div>
 
-          <div style={{ marginBottom: '40px' }}>
-            <h2 style={{ 
-              fontSize: '24px', 
-              fontWeight: '700', 
-              color: 'var(--primary)', 
-              marginBottom: '15px',
-              borderBottom: '2px solid var(--primary)',
-              paddingBottom: '8px'
-            }}>
-              所在地
-            </h2>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              メールまたはお電話にてお問い合わせください
-            </p>
-          </div>
 
           <div style={{ marginBottom: '40px' }}>
             <h2 style={{ 
