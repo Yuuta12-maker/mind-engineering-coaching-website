@@ -18,9 +18,6 @@ export const LINKS = {
 export const CONTACT_INFO = {
   EMAIL: 'mindengineeringcoaching@gmail.com',
   PHONE: '090-5710-7627',
-  POSTAL_CODE: '〒790-0012',
-  ADDRESS: '愛媛県松山市湊町2-5-2 リコオビル401',
-  FULL_ADDRESS: '〒790-0012 愛媛県松山市湊町2-5-2 リコオビル401',
   BUSINESS_HOURS: '平日 9:00-18:00',
   SELLER_NAME: '森山雄太',
   COMPANY_NAME: 'マインドエンジニアリング・コーチング',

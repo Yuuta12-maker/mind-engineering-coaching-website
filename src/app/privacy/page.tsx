@@ -57,7 +57,6 @@ export default function Privacy() {
               <li style={{ marginBottom: '8px' }}>お名前、フリガナ</li>
               <li style={{ marginBottom: '8px' }}>メールアドレス</li>
               <li style={{ marginBottom: '8px' }}>電話番号</li>
-              <li style={{ marginBottom: '8px' }}>住所</li>
               <li style={{ marginBottom: '8px' }}>生年月日</li>
               <li style={{ marginBottom: '8px' }}>性別</li>
               <li style={{ marginBottom: '8px' }}>コーチングセッションに関する情報</li>
