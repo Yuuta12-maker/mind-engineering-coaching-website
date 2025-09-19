@@ -328,9 +328,6 @@ export default function Terms() {
                 <strong>担当者：</strong>{CONTACT_INFO.SELLER_NAME}
               </p>
               <p style={{ marginBottom: '10px' }}>
-                <strong>所在地：</strong>{CONTACT_INFO.FULL_ADDRESS}
-              </p>
-              <p style={{ marginBottom: '10px' }}>
                 <strong>電話番号：</strong>{CONTACT_INFO.PHONE}
               </p>
               <p style={{ marginBottom: '10px' }}>
