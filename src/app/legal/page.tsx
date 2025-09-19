@@ -49,8 +49,7 @@ export default function Legal() {
               所在地
             </h2>
             <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              {CONTACT_INFO.POSTAL_CODE}<br />
-              {CONTACT_INFO.ADDRESS}
+              メールまたはお電話にてお問い合わせください
             </p>
           </div>
 
